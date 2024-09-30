@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  background: #f6f7f8 ;
 }
 
 .App-logo {
@@ -34,5 +35,37 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+.image-container {
+  position: relative;
+}
+.animated-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 60px;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  opacity: 0;
+  animation: fadeIn 6s ease-in infinite;
+
+}
+
+/* Animation keyframes */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translate(-100%, -50%);
+  }
+  50% {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-0%, -50%);
   }
 }
